@@ -59,7 +59,7 @@ class login extends StatelessWidget {
           Row(mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("Don't have an account?",
-                style: TextStyle(fontSize: 28, color: Colors.grey),),
+                style: TextStyle(fontSize: 21, color: Colors.grey),),
               TextButton(onPressed: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => signup(),));

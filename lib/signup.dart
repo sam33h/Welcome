@@ -90,7 +90,7 @@ class signup extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Already have an account?",
-                    style: TextStyle(fontSize: 28, color: Colors.grey),),
+                    style: TextStyle(fontSize: 21, color: Colors.grey),),
                   TextButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => login(),));},
                       child: Text("Login", style: TextStyle(
                           fontWeight: FontWeight.bold, color: Colors.black),))
