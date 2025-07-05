@@ -7,7 +7,7 @@ class wlcm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: Colors.white,
       body: Center(
         child: Column(
           children: [

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signup/login.dart';
+import 'package:signup/services.dart';
 
 class signup extends StatefulWidget {
   const signup({super.key});
@@ -16,7 +17,7 @@ class _signupState extends State<signup> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: Colors.white,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.only(left: 600, right: 600),
@@ -33,7 +34,7 @@ class _signupState extends State<signup> {
                 style: TextStyle(color: Colors.grey),
               ),
               SizedBox(height: 25),
-              TextField(
+              TextFormField( controller: namecontroller,
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
@@ -46,7 +47,7 @@ class _signupState extends State<signup> {
               ),
 
               SizedBox(height: 25),
-              TextField(
+              TextFormField( controller: emailcontroller,
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
@@ -58,7 +59,7 @@ class _signupState extends State<signup> {
                 ),
               ),
               SizedBox(height: 25),
-              TextField(
+              TextFormField(controller: passwordcontroller,
                 obscureText: true,
                 decoration: InputDecoration(
                   filled: true,
@@ -71,7 +72,7 @@ class _signupState extends State<signup> {
                 ),
               ),
               SizedBox(height: 25),
-              TextField(
+              TextFormField(controller: confirmcontroller,
                 obscureText: true,
                 decoration: InputDecoration(
                   filled: true,
@@ -89,7 +90,7 @@ class _signupState extends State<signup> {
                 height: 40,
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {signupp(username: namecontroller.text, email: emailcontroller.text, password: passwordcontroller.text, confirm: confirmcontroller.text, context: context);},
                   child: Text("Signup"),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blueAccent,
@@ -104,7 +105,7 @@ class _signupState extends State<signup> {
                 children: [
                   Text(
                     "Already have an account?",
-                    style: TextStyle(fontSize: 21, color: Colors.grey),
+                    style: TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                   TextButton(
                     onPressed: () {
